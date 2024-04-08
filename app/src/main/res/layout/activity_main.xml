@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="etsoft.localsocket.MainActivity">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerVW"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        tools:listitem="@layout/rv_item"
+        tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
+
+        android:requiresFadingEdge="horizontal|vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/start_javas_javac"
+        />
+
+
+    <TextView
+        android:id="@+id/no_data_tv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#ffffff"
+        android:text="No data"
+        android:gravity="center"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/start_javas_javac"
+        />
+
+    <Button
+        android:id="@+id/start_javas_javac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start JavaS-JavaC"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/start_javas_cc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/javas_to_javac_send"
+        android:layout_margin="2dp"/>
+
+    <Button
+        android:id="@+id/javas_to_javac_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="JavaS Send"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@id/start_javas_javac"
+        app:layout_constraintStart_toEndOf="@id/start_javas_javac"
+        app:layout_constraintEnd_toStartOf="@id/javac_to_javas_send"
+        android:layout_margin="2dp"/>
+
+    <Button
+        android:id="@+id/javac_to_javas_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="JavaC Send"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@id/start_javas_javac"
+        app:layout_constraintStart_toEndOf="@id/javas_to_javac_send"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="2dp"/>
+
+
+    <Button
+        android:id="@+id/start_javas_cc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start JavaS-CppC"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/cs_javac"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/javas_to_cc_send"
+        android:layout_margin="2dp"/>
+
+    <Button
+        android:id="@+id/javas_to_cc_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="JavaS Send"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@id/start_javas_cc"
+        app:layout_constraintStart_toEndOf="@id/start_javas_cc"
+        app:layout_constraintEnd_toStartOf="@id/cc_to_javas_send"
+        android:layout_margin="2dp"/>
+    <Button
+        android:id="@+id/cc_to_javas_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CppC Send"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@id/start_javas_cc"
+        app:layout_constraintStart_toEndOf="@id/javas_to_cc_send"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="2dp"/>
+
+
+    <Button
+        android:id="@+id/cs_javac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start C++S - JavaC"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/stop"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="2dp"/>
+    <Button
+        android:id="@+id/stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="STOP active socket stream"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="2dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
